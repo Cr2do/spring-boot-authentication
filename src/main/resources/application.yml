@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: "java-spring-authentication"
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
