@@ -15,3 +15,13 @@ spring:
 
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+
+  jwt:
+    secret: "random_secret_key_UxOGtrXGDxZqXYLmPbZdcDeUgX9u0Kgg_for_auth_app"
+    expiration: 3600000 # 1 hour in milliseconds
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: "DEBUG"

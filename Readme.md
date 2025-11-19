@@ -10,3 +10,14 @@ This project include
 - Full documentation with Swagger
 
 
+
+### Front end Notion 
+
+- Backend For Front-End
+- MicroFrontend
+
+
+### Backend notion
+
+- CQRS Paterns
+
