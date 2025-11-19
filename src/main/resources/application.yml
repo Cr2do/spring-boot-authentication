@@ -20,6 +20,12 @@ spring:
     secret: "random_secret_key_UxOGtrXGDxZqXYLmPbZdcDeUgX9u0Kgg_for_auth_app"
     expiration: 3600000 # 1 hour in milliseconds
 
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+
+
 #logging:
 #  level:
 #    org:

@@ -1,4 +1,4 @@
-package com.example.javaspringauthentication.services.config;
+package com.example.javaspringauthentication.config;
 
 import com.example.javaspringauthentication.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;

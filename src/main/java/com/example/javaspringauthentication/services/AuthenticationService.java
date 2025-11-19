@@ -2,7 +2,7 @@ package com.example.javaspringauthentication.services;
 
 import com.example.javaspringauthentication.entities.User;
 import com.example.javaspringauthentication.repositories.UserRepository;
-import com.example.javaspringauthentication.services.config.AuthenticationUtils;
+import com.example.javaspringauthentication.config.AuthenticationUtils;
 import com.example.javaspringauthentication.services.dto.LoginCreateDTO;
 import com.example.javaspringauthentication.services.dto.LoginResponseDTO;
 import com.example.javaspringauthentication.services.dto.RegisterDTO;

@@ -1,4 +1,4 @@
-package com.example.javaspringauthentication.services.config;
+package com.example.javaspringauthentication.config;
 
 import com.example.javaspringauthentication.entities.User;
 import org.springframework.security.core.GrantedAuthority;
