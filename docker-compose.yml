@@ -1,6 +1,6 @@
 
 services:
-  app:
+  api:
     build:
       dockerfile: Dockerfile
       context: .
