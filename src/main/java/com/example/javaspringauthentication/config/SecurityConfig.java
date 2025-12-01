@@ -15,11 +15,8 @@ import org.springframework.security.crypto.password.DelegatingPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.security.web.util.matcher.RequestMatcher;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
 @Configuration
@@ -42,9 +39,11 @@ public class SecurityConfig {
                 req ->
                     req
                         .requestMatchers(
-                            "/login",
                             "/h2-console/**",
                             "/register",
+                            "/login",
+                            "/forgot-password",
+                            "/reset-password",
                             // TODO : Never broke these links below there are useful for Swagger
                             "/swagger-ui/**",
                             "/swagger-ui.html",

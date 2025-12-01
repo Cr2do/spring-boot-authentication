@@ -13,6 +13,5 @@ public class LoginResponseDTO {
 
     private String email;
     private String token;
-//    private Long expiresIn;
 
 }
