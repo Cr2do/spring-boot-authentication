@@ -3,6 +3,7 @@ package com.example.javaspringauthentication.controllers;
 import com.example.javaspringauthentication.services.PasswordResetService;
 import com.example.javaspringauthentication.services.dto.ForgotPasswordRequest;
 import com.example.javaspringauthentication.services.dto.ResetPasswordRequest;
+import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,7 @@ public class PasswordResetController {
     }
 
     @PostMapping("/forgot-password")
-    public ResponseEntity<String> forgotPassword(@RequestBody ForgotPasswordRequest forgotPasswordRequest) {
+    public ResponseEntity<String> forgotPassword(@RequestBody ForgotPasswordRequest forgotPasswordRequest) throws MessagingException {
         passwordResetService.initPasswordReset(forgotPasswordRequest.getEmail());
         return ResponseEntity.ok("If email exist, reset link sent");
     }

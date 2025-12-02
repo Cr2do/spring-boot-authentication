@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Email Notification</title>
+    <style media="all" type="text/css">
+        /* Base Resets */
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; -webkit-text-size-adjust: none; background-color: #edf2f7; color: #718096; height: 100%; line-height: 1.4; margin: 0; padding: 0; width: 100% !important; }
+
+        /* Layout Wrappers */
+        .wrapper { width: 100%; background-color: #edf2f7; padding: 0; margin: 0; }
+        .email-wrapper { width: 100%; margin: 0; padding: 0; background-color: #edf2f7; }
+        .email-content { width: 100%; margin: 0; padding: 0; max-width: 600px; margin: 0 auto; }
+
+        /* Header & Footer */
+        .email-masthead { padding: 25px 0; text-align: center; }
+        .email-masthead_name { font-size: 16px; font-weight: bold; color: #3d4852; text-decoration: none; text-shadow: 0 1px 0 white; }
+        .email-footer { width: 570px; margin: 0 auto; padding: 57px; text-align: center; }
+        .email-footer p { color: #b0adc5; font-size: 12px; text-align: center; }
+
+        /* The White Card */
+        .email-body { width: 100%; margin: 0; padding: 0; border-top: 1px solid #e8e5ef; border-bottom: 1px solid #e8e5ef; background-color: #ffffff; }
+        .email-body_inner { width: 570px; margin: 0 auto; padding: 45px; background-color: #ffffff; border-radius: 2px; box-shadow: 0 2px 0 rgba(0, 0, 150, 0.025); }
+
+        /* Typography & Components */
+        h1 { color: #3d4852; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left; }
+        p { color: #718096; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left; }
+
+        /* Buttons */
+        .action { width: 100%; margin: 30px auto; padding: 0; text-align: center; }
+        .button { background-color: #2d3748; border-radius: 4px; color: #ffffff; display: inline-block; font-size: 15px; font-weight: bold; line-height: 45px; text-align: center; text-decoration: none; width: 200px; -webkit-text-size-adjust: none; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); }
+        .button--blue { background-color: #2d3748; } /* Laravel dark gray/blue default */
+
+        /* Breakout Link (The "If you're having trouble" part) */
+        .breakout-link { margin-top: 25px; padding-top: 25px; border-top: 1px solid #e8e5ef; }
+        .breakout-link p { font-size: 12px; line-height: 1.5; color: #b0adc5; }
+        .breakout-link a { color: #3869d4; word-break: break-all; }
+
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-body_inner, .email-footer { width: 100% !important; }
+        }
+    </style>
+</head>
+<body>
+<table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+        <td align="center">
+            <table class="email-content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+                    <td class="email-masthead">
+                        <a href="https://example.com" class="email-masthead_name">
+                            Email
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="email-body" width="100%" cellpadding="0" cellspacing="0">
+                        <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                            <tr>
+                                <td class="content-cell">
+                                    <div th:replace="${content}"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                            <tr>
+                                <td class="content-cell" align="center">
+                                    <p class="sub center">
+                                        &copy; <span th:text="${#dates.format(#dates.createNow(), 'yyyy')}">2025</span> Your Company. All rights reserved.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
