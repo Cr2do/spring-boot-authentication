@@ -4,6 +4,7 @@ import com.example.javaspringauthentication.entities.PasswordResetToken;
 import com.example.javaspringauthentication.entities.User;
 import com.example.javaspringauthentication.repositories.PasswordResetTokenRepository;
 import com.example.javaspringauthentication.repositories.UserRepository;
+import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -33,7 +34,7 @@ public class PasswordResetService {
         this.emailService = emailService;
     }
 
-    public void initPasswordReset(String email) {
+    public void initPasswordReset(String email) throws MessagingException {
         User user = userRepository.findByEmail(email);
 
         if (user == null) {

@@ -17,14 +17,14 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
 
   jwt:
-    secret: "random_secret_key_UxOGtrXGDxZqXYLmPbZdcDeUgX9u0Kgg_for_auth_app"
-    expiration: 3600000 # 1 hour in milliseconds
+    secret: ${JWT_SECRET_KEY}
+    expiration: 3600000
 
   mail:
-    host: "sandbox.smtp.mailtrap.io"
-    port: 2525
-    username: "a14b92dd608ee6"
-    password: "5c125ceb7b5abf"
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -34,8 +34,11 @@ spring:
             required: true
           ssl:
             enable: false
+            trust: "*"
 
 
+app:
+  mail: ${MAIL_FROM_ADDRESS}
 
 springdoc:
   swagger-ui:
