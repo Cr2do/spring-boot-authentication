@@ -1,6 +1,6 @@
 package com.example.javaspringauthentication.config;
 
-import com.example.javaspringauthentication.repositories.UserRepository;
+import com.example.javaspringauthentication.user.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

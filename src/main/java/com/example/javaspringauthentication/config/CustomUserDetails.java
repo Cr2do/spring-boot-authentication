@@ -1,6 +1,6 @@
 package com.example.javaspringauthentication.config;
 
-import com.example.javaspringauthentication.entities.User;
+import com.example.javaspringauthentication.user.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

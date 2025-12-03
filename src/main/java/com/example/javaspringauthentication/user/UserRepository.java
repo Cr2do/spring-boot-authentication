@@ -1,6 +1,5 @@
-package com.example.javaspringauthentication.repositories;
+package com.example.javaspringauthentication.user;
 
-import com.example.javaspringauthentication.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

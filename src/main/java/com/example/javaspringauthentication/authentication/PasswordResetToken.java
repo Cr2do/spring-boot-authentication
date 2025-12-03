@@ -1,5 +1,6 @@
-package com.example.javaspringauthentication.entities;
+package com.example.javaspringauthentication.authentication;
 
+import com.example.javaspringauthentication.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,7 +26,7 @@ public class PasswordResetToken {
 
     @OneToOne(fetch =  FetchType.EAGER)
     @JoinColumn(name = "user_id")
-    private User  user;
+    private User user;
 
     public boolean isExpired() {
         return LocalDateTime.now().isAfter(this.expiryDate);

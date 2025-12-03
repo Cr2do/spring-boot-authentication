@@ -1,6 +1,5 @@
-package com.example.javaspringauthentication.repositories;
+package com.example.javaspringauthentication.authentication;
 
-import com.example.javaspringauthentication.entities.PasswordResetToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
