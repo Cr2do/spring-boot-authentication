@@ -1,4 +1,4 @@
-package com.example.javaspringauthentication.entities;
+package com.example.javaspringauthentication.user;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,7 +7,6 @@ import lombok.experimental.Accessors;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.security.Timestamp;
 import java.util.Date;
 
 @Entity

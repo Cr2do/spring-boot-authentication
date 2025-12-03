@@ -1,4 +1,4 @@
-package com.example.javaspringauthentication.services.dto;
+package com.example.javaspringauthentication.authentication.dtos;
 
 import lombok.Builder;
 import lombok.Data;
